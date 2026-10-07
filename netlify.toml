@@ -1,0 +1,11 @@
+# Overrides the site's UI build settings, which pointed to a non-existent
+# base directory and a Jekyll build that this static site doesn't use.
+[build]
+  base = "."
+  publish = "."
+  command = "echo 'Static site, no build step'"
+
+# The Next.js runtime plugin is enabled in the site's UI settings, but this
+# isn't a Next.js project, so tell the plugin to skip itself.
+[build.environment]
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
